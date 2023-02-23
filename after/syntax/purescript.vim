@@ -8,15 +8,15 @@ if !get(g:, 'purescript_unicode_conceal_enable', 0) || !has('conceal') || &encod
 endif
 
 " vim: set fenc=utf-8:
-syntax match purescriptNiceOperator '->' conceal cchar=→
+syntax match purescriptNiceOperator "->" conceal cchar=→
 	\ containedin=purescriptTypeExport,purescriptConstructorDecl,purescriptClassDecl,purescriptFunctionDecl,purescriptData,purescriptNewtype,purescriptTypeAlias,purescriptOperatorType
-syntax match purescriptNiceOperator '<-' conceal cchar=←
+syntax match purescriptNiceOperator "<-" conceal cchar=←
 	\ containedin=purescriptTypeExport,purescriptConstructorDecl,purescriptClassDecl,purescriptFunctionDecl,purescriptData,purescriptNewtype,purescriptTypeAlias,purescriptOperatorType
-syntax match purescriptNiceOperator '=>' conceal cchar=⇒
+syntax match purescriptNiceOperator "=>" conceal cchar=⇒
 	\ containedin=purescriptTypeExport,purescriptConstructorDecl,purescriptClassDecl,purescriptFunctionDecl,purescriptData,purescriptNewtype,purescriptTypeAlias,purescriptOperatorType
 syntax match purescriptNiceOperator "<=\ze[^<]" conceal cchar=⇐
 	\ containedin=purescriptTypeExport,purescriptConstructorDecl,purescriptClassDecl,purescriptFunctionDecl,purescriptData,purescriptNewtype,purescriptTypeAlias,purescriptOperatorType
-syntax match purescriptNiceOperator '::' conceal cchar=∷
+syntax match purescriptNiceOperator "::" conceal cchar=∷
 	\ containedin=purescriptTypeExport,purescriptConstructorDecl,purescriptClassDecl,purescriptFunctionDecl,purescriptData,purescriptNewtype,purescriptTypeAlias,purescriptOperatorType
 syntax keyword purescriptNiceOperator forall conceal cchar=∀
 	\ containedin=purescriptTypeExport,purescriptConstructorDecl,purescriptClassDecl,purescriptFunctionDecl,purescriptData,purescriptNewtype,purescriptTypeAlias,purescriptOperatorType
@@ -25,9 +25,9 @@ if !get(g:, 'purescript_unicode_conceal_disable_common', 1)
 	syntax match purescriptNiceOperator "\/\@<!\\\ze[[:alpha:][:space:]_([]" conceal cchar=λ
 	syntax match purescriptNiceOperator "\~>" conceal cchar=↝
 		\ containedin=purescriptTypeExport,purescriptConstructorDecl,purescriptClassDecl,purescriptFunctionDecl,purescriptData,purescriptNewtype,purescriptTypeAlias,purescriptOperatorType
-	syntax match purescriptNiceOperator '<<<' conceal cchar=∘
-	syntax match purescriptNiceOperator '==' conceal cchar=≡
-	syntax match purescriptNiceOperator '/=' conceal cchar=≠
+	syntax match purescriptNiceOperator "<<<" conceal cchar=∘
+	syntax match purescriptNiceOperator "==" conceal cchar=≡
+	syntax match purescriptNiceOperator "/=" conceal cchar=≠
 	" deals with Kliesli operator false positives
 	syntax match purescriptNiceOperator "<=\ze[^<]" conceal cchar=≤
 	syntax match purescriptNiceOperator ">=\ze[^>]" conceal cchar=≥
